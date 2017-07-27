@@ -1,3 +1,74 @@
 <h1> About Page </h1>
 
 <p> Our goal is to create a project management app</p>
+
+<p>
+<div class="panel panel-default">
+    <div class="panel-heading">Create Progress Report</div>
+
+    <div class="panel-body">                  
+	    <!--Progress Report Name-->
+	<div class="form-group">
+        <label class="col-md-3 control-label">Name</label>
+        <div class="col-md-9">
+            <input type="text" class="form-control" name="name">
+        </div>
+    </div>
+    <div class
+    <%= render 'progressreport' %>
+
+                                
+                                                                    <!--Watchers-->
+<div class="form-group">
+	<label class="col-md-3 control-label progress-row">Add Watchers</label>
+	<div class="col-md-9 progress-row watchers">
+	    <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="search" id="watchers" name="q" class="form-control search-input tt-input" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-usersList"></div></div></span>
+	    <div id="watchers-display">
+	        <div id="watchers-display-title">Users who will be notified:</div>
+	    </div>
+	</div>
+</div>                                    
+                                 
+
+                                <!--Progress Report Images-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Attachments</label>
+                                    <div class="col-md-9">
+                                        <input type="file" name="attachments[]" id="attachments" multiple="">
+                                    </div>
+                                </div>                   
+
+                                <!--Submit Button-->
+                                <div class="form-group">
+                                    <div class="col-md-1 col-md-offset-10">
+                                        <button class="btn btn-primary">
+                                            <span>
+                                                <i class="fa fa-btn fa-check-circle"></i>Create
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <input type="hidden" name="project_id" id="project_id" value="73">
+                                <input type="hidden" name="user_name" id="user_name" value="Franky Test">
+                                <input type="hidden" name="user_id" id="user_id" value="82">
+                                <input type="hidden" name="watchers-value" id="watchers-value" value="">
+
+                                <script type="text/javascript">
+                                    var url = window.location.href;
+                                    var project_id = url.match(/\d+/)[0];
+                                    document.getElementById('project_id').value = project_id;
+                                    document.getElementById('user_name').value = Spark.state.user.name;
+                                    document.getElementById('user_id').value = Spark.state.user.id;                                    
+                                </script>
+                                
+                                <!--sort out notifications here-->
+                                <!--<div class="alert alert-success">
+                                    Project created and ready for use!
+                                </div>-->
+                            </form>
+                        </div>
+                    </div>
+</p>
+
