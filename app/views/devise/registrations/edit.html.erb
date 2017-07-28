@@ -1,27 +1,115 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+            <!-- Tabs -->
+            <div class="col-md-4">
+                <div class="panel panel-default panel-flush">
+                    <div class="panel-heading">
+                        Settings
+                    </div>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+                    <div class="panel-body">
+                        <div class="spark-settings-tabs">
+                            <ul class="nav spark-settings-stacked-tabs" role="tablist">
+                                <!-- Profile Link -->
+                                <li role="presentation" class="active">
+                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true">
+                                        <i class="fa fa-fw fa-btn fa-edit"></i>Profile
+                                    </a>
+                                </li>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+                                <!-- Teams Link -->
+                                                                    <li role="presentation">
+                                        <a href="#teams" aria-controls="teams" role="tab" data-toggle="tab">
+                                            <i class="fa fa-fw fa-btn fa-users"></i>Teams
+                                        </a>
+                                    </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-  </div>
+                <!-- Billing Tabs -->
+                            </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+            <!-- Tab Panels -->
+            <div class="col-md-8">
+                <div class="tab-content">
+                    <!-- Profile -->
+                    <div role="tabpanel" class="tab-pane active" id="profile">
+                        <div>
+        <!-- Update Profile Photo -->
+        <div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Profile Photo</div>
 
-<h3>Cancel my account</h3>
+            <div class="panel-body">
+                <!--v-if-->
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                <form class="form-horizontal" role="form">
+                    <!-- Photo Preview-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">&nbsp;</label>
 
-<%= link_to "Back", :back %>
+                        <div class="col-md-6">
+                            <span role="img" class="profile-photo-preview" style="background-image: url(&quot;https://www.gravatar.com/avatar/e79aa3193a867a858225591dc21dbc19.jpg?s=200&amp;d=mm&quot;);">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Update Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">&nbsp;</label>
+
+                        <div class="col-md-6">
+                            <label type="button" class="btn btn-primary btn-upload">
+                                <span>Select New Photo</span>
+
+                                <input type="file" class="form-control" name="photo">
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!--v-if-->
+    </div><!--v-component-->
+
+  <!-- Update Contact Information -->
+  <div class="panel panel-default">
+  <div class="panel-heading">Contact Information</div>
+
+  <div class="panel-body">
+      <!-- Success Message -->
+      <!--v-if-->
+
+     <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+            <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+            <%= f.input :password_confirmation, required: false %>
+            <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Update", class: "btn btn-primary btn-lg" %>
+          </div>
+        <% end %>
+
+        <h3>Cancel my account</h3>
+
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+        <%= link_to "Back", :back %>
+
+
+              
