@@ -20,6 +20,9 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'devise'
 gem 'omniauth-google-oauth2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-ui-rails'
+
 
 
 
