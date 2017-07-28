@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'tinymce-rails'
 gem "font-awesome-rails"
+gem 'simple_form'
 
 
 group :development, :test do
