@@ -19,6 +19,8 @@ gem 'tinymce-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'devise'
+gem 'omniauth-google-oauth2'
+
 
 
 group :development, :test do
