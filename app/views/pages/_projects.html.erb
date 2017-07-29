@@ -1,0 +1,187 @@
+<div id="spark-app">
+        <!-- Main Content -->
+        <div class="container">
+        <!-- Application Dashboard -->
+        <div class="row">
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Test Dashboard</div>
+
+                    <div class="panel-body">
+                        <div class="col-md-9">
+                            <h3>Projects</h3>    
+                            All projects for the Test team
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                <div class="project-tile">
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12 create-project">
+                                        <button type="button" class="btn btn-primary" id="create-project">
+                                            Create Project »
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-md-3">
+                                    <h3>Team</h3>
+                                        All users from all projects
+                                    <hr>
+                                <div class="row">
+                                    <div class="col-md-12 invite-new-member">
+                                        <button type="button" class="btn btn-primary" id="invite-new-member">
+                                        Invite New Member  »              
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Application Level Modals -->
+                    <!-- Notifications Modal -->
+<div>
+        <div class="modal docked docked-right" id="modal-notifications" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <div class="btn-group">
+                            <button class="btn btn-default active" style="width: 50%;">
+                                Notifications
+                            </button>
+
+                            <button class="btn btn-default" style="width: 50%;">
+                                Announcements <!--v-if-->
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Informational Messages -->
+                        <!--v-if-->
+
+                        <div class="notification-container">
+                            <div class="alert alert-warning m-b-none">
+                                We don't have anything to show you right now! But when we do,
+                                we'll be sure to let you know. Talk to you soon!
+                            </div>
+                        </div><!--v-if-->
+
+                        <!-- List Of Notifications -->
+                        <!--v-if-->
+
+                        <!-- List Of Announcements -->
+                        <!--v-if-->
+                    </div>
+
+                    <!-- Modal Actions -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--v-component-->
+            <!-- Customer Support -->
+<div class="modal fade" id="modal-support" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-b-none">
+                <form class="form-horizontal p-b-none m-b-none" role="form">
+                    <!-- From -->
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input id="support-from" type="text" class="form-control" placeholder="Your Email Address">
+
+                            <span class="help-block" style="display: none;">
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input id="support-subject" type="text" class="form-control" placeholder="Subject">
+
+                            <span class="help-block" style="display: none;">
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group m-b-none">
+                        <div class="col-md-12">
+                            <textarea class="form-control" rows="7" placeholder="Message"></textarea>
+
+                            <span class="help-block" style="display: none;">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal Actions -->
+            <div class="modal-footer border-none">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-btn fa-paper-plane"></i>Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- Session Expired Modal -->
+<div class="modal fade" id="modal-session-expired" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Session Expired
+                </h4>
+            </div>
+
+            <div class="modal-body">
+                Your session has expired. Please login again to continue.
+            </div>
+
+            <!-- Modal Actions -->
+            <div class="modal-footer">
+                <a href="/login">
+                    <button type="button" class="btn btn-default">
+                        <i class="fa fa-btn fa-sign-in"></i>Go To Login
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="upload-modal" style="display:none">
+	<div class="spinner">
+	<img class="img-responsive" src="/img/spinner.gif">
+	</div>
+	<div class="upload-text">
+		Uploading...
+	</div>
+</div>
+
+<script type="text/javascript">
+	function startUpload() {
+	    $('.upload-modal').css("display", "block");
+
+	    document.getElementById("add-asset-form").submit();
+	}
+</script>
+        <!-- JavaScript -->
+        <script src="/js/app.js"></script></div><!--v-component--></div>
