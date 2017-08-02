@@ -23,6 +23,8 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails'
+#file uploader
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
